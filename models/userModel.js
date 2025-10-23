@@ -25,6 +25,9 @@ const User = sequelize.define('users', {
     type: DataTypes.STRING,
     defaultValue: 'admin',
   },
+}, {
+  tableName: 'users',
+  timestamps: true, // ✅ Add this line to create createdAt & updatedAt columns
 });
 
 module.exports = User;
